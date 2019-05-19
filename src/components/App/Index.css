@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  background-color: rgb(237, 222, 247);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(14, 14, 14);
+}
+
+h1 {
+  border-bottom: 1px solid rgb(14, 14, 14);
+}
