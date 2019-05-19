@@ -1,5 +1,5 @@
 import React from 'react';
-import './Index.css';
+import './Index.scss';
 import Todo from '../Todo/Index';
 
 export default function App() {

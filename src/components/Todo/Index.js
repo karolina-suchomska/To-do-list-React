@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TodoInput from '../TodoInput/Index';
 import TodoList from '../TodoList/Index';
-import './Index.css'
+import './Index.scss'
 
 class Todo extends Component {
     state = {
@@ -80,13 +80,13 @@ class Todo extends Component {
                     Tasks to be done: {this.state.todos.filter(todo => !todo.complete).length}
                 </div>
                 <div className="todo-button-active">
-                    <button classname="todo-button" onClick={() => this.updateTodo('all')} >All</button>
-                    <button classname="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
-                    <button classname="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button>
-                    <div> 
+                    <button className="todo-button" onClick={() => this.updateTodo('all')} >All</button>
+                    <button className="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
+                    <button className="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button> 
+                </div>
+                <div className="todo-button-complete"> 
                     <button onClick={this.handleAllComplete}>Complete all</button>  
                     </div>
-                </div>
                <TodoInput onSubmit={this.addTodo} />
                {todos.map(todo => (
                    <TodoList 
@@ -104,5 +104,5 @@ class Todo extends Component {
         );
     }
 }
- 
+
 export default Todo;
