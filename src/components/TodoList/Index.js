@@ -1,9 +1,10 @@
 import React from 'react';
+import './Index.css';
 
 const TodoList = (props) => {
     return ( 
         <div> 
-            <div 
+            <span 
                 className="todo-list" 
                 style={{
                     textDecoration: props.todo.complete ? "line-through" : ""
@@ -11,8 +12,10 @@ const TodoList = (props) => {
                 onClick={props.changeComplete}
             >
                 {props.todo.text}
-            </div>
-            <button onClick={props.onDelete}>x</button>
+            </span>
+            <span className="todo-button-delete">
+                <button onClick={props.onDelete}>x</button>
+            </span>
         </div> 
      );
 }

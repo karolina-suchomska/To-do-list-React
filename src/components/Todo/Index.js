@@ -11,9 +11,11 @@ class Todo extends Component {
     };
 
     addTodo = todo => {
-        this.setState(state => ({
+        if(todo.text !== "") {
+            this.setState(state => ({
             todos: [...state.todos, todo]
-        }))
+            }))
+        }
     }
 
     changeComplete = id => {
@@ -78,15 +80,10 @@ class Todo extends Component {
                     Tasks to be done: {this.state.todos.filter(todo => !todo.complete).length}
                 </div>
                 <div className="todo-button-active">
-                    <button onClick={() => this.updateTodo('all')} >All</button>
-                    <button onClick={() => this.updateTodo('active')} >Active</button>
-                    <button onClick={() => this.updateTodo('complete')} >Complete</button>
-                    <div>
-                       {this.state.todos.filter(todo => todo.complete).length ? (
-                        <span>
-                            <button onClick={this.handleAllDeleteTodo}>Delete all complete todo</button>
-                        </span>
-                    ) : null}  
+                    <button classname="todo-button" onClick={() => this.updateTodo('all')} >All</button>
+                    <button classname="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
+                    <button classname="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button>
+                    <div> 
                     <button onClick={this.handleAllComplete}>Complete all</button>  
                     </div>
                 </div>
@@ -97,7 +94,12 @@ class Todo extends Component {
                     changeComplete={() => this.changeComplete(todo.id)}
                     onDelete={() => this.handleDeleteTodo(todo.id)}
                     todo={todo} />
-               ))}             
+               ))} 
+               {this.state.todos.filter(todo => todo.complete).length ? (
+                    <span className="todo-button-active">
+                        <button onClick={this.handleAllDeleteTodo}>Delete all complete todo</button>
+                    </span>
+                ) : null}             
             </div>
         );
     }

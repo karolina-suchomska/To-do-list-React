@@ -11,7 +11,7 @@
 }
 
 .todo-input-text input {
-    border: 1px solid black;
+    border: 1px solid rgb(14, 14, 14);
     background-color: rgb(237, 222, 247);
     color: rgb(14, 14, 14);
     padding: 15px 10px;
@@ -23,6 +23,6 @@
 }
 
 .todo-button-add button {
-    border: 1px solid black;
+    border: 1px solid rgb(14, 14, 14);
     margin: 0 auto;
 }
