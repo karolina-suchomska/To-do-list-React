@@ -1,6 +1,6 @@
 import React from 'react';
-import './Index.scss';
-import Todo from '../Todo/Index';
+import '../Style.scss';
+import Todo from './Todo';
 
 export default function App() {
   return (

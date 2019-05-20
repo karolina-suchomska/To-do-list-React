@@ -1,5 +1,5 @@
 import React from 'react';
-import './Index.scss';
+import '../Style.scss';
 
 const TodoList = (props) => {
     return ( 

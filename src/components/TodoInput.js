@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
-import './Index.scss';
+import '../Style.scss';
 
 class TodoInput extends Component {
     state = {
