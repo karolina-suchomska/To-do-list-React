@@ -8,8 +8,7 @@
 
 button {
     background-color: rgb(237, 222, 247);
-    border: none;
-    border-bottom: 1px solid rgb(237, 222, 247);
+    border: 1px solid rgba(90, 90, 90, 0.411);
     color: rgb(14, 14, 14);
     padding: 15px 25px;
     text-align: center;
@@ -22,15 +21,15 @@ button {
 
 .todo-button-active{
     button:hover{
-        border-bottom: 1px solid rgb(14, 14, 14);
+        border: 1px solid rgb(14, 14, 14);
     }
     button:focus {
-        border-bottom: 1px solid rgb(14, 14, 14);
+        border: 1px solid rgb(14, 14, 14);
     }
 }
 
 .todo-button-complete {
     button:hover {
-       border-bottom: 1px solid rgb(14, 14, 14);
+       border: 1px solid rgb(14, 14, 14);
     }
 }
