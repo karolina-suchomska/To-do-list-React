@@ -3,10 +3,13 @@ import uuid from 'uuid';
 import '../Style.scss';
 
 class TodoInput extends Component {
-    state = {
-        id: uuid(),
-        text: ""
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            id: uuid(),
+            text: ""
+        };
+    }
 
     handleChange = e => {
         this.setState({

@@ -4,11 +4,14 @@ import TodoList from './TodoList';
 import '../Style.scss'
 
 class Todo extends Component {
-    state = {
-        todos: [],
-        todoShow: 'all',
-        allComplete: true,
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            todos: [],
+            todoShow: 'all',
+            allComplete: true,
+        };
+    }
 
     addTodo = todo => {
         if(todo.text !== "") {
