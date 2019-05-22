@@ -4,12 +4,13 @@ import TodoList from './TodoList';
 import '../Style.scss'
 
 class Todo extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             todos: [],
             todoShow: 'all',
             allComplete: true,
+            clickButon: 'false',
         };
     }
 
@@ -37,10 +38,11 @@ class Todo extends Component {
         }))
     }
 
-    updateTodo = e => {
+    updateTodo = (e, clickButon) => {
         this.setState({
             todoShow: e,
-        })
+            clickButon: this.state.clickButon
+        },()=>console.log(clickButon))
     }
 
     handleDeleteTodo = id => {
