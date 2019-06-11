@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
-import '../Style.scss'
 
 class Todo extends Component {
     constructor() {

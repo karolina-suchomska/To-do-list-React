@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Style.scss';
+import '../style/Style.scss';
 import Todo from './Todo';
 
 export default function App() {
