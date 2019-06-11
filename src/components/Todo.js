@@ -81,30 +81,38 @@ class Todo extends Component {
 
         return ( 
             <div className="todo">
-                <div className="todo-done">
-                    Tasks to be done: {this.state.todos.filter(todo => !todo.complete).length}
-                </div>
-                <div className="todo-button-active">
-                    <button className="todo-button" onClick={() => this.updateTodo('all')}>All</button>
-                    <button className="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
-                    <button className="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button> 
-                </div>
-                <div className="todo-button-complete"> 
-                    <button onClick={this.handleAllComplete}>Complete all</button>  
-                </div>
-               <TodoInput onSubmit={this.addTodo} />
-               {todos.map(todo => (
-                   <TodoList 
-                    key={todo.id} 
-                    changeComplete={() => this.changeComplete(todo.id)}
-                    onDelete={() => this.handleDeleteTodo(todo.id)}
-                    todo={todo} />
-               ))} 
-               {this.state.todos.filter(todo => todo.complete).length ? (
-                    <span className="todo-button-active">
-                        <button onClick={this.handleAllDeleteTodo}>Delete all complete todo</button>
-                    </span>
-                ) : null}             
+                <Container>
+                    <Row>
+                        <Col>
+                            <div className="todo-button-active">
+                                <button className="todo-button" onClick={() => this.updateTodo('all')}>All</button>
+                                <button className="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
+                                <button className="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button> 
+                            </div>
+                            <div className="todo-button-complete"> 
+                                <button onClick={this.handleAllComplete}>Complete all</button>  
+                            </div>
+                            <TodoInput onSubmit={this.addTodo} />
+                        </Col>
+                        <Col>
+                            <div className="todo-done">
+                                Tasks to be done: {this.state.todos.filter(todo => !todo.complete).length}
+                            </div>                    
+                            {todos.map(todo => (
+                                <TodoList 
+                                    key={todo.id} 
+                                    changeComplete={() => this.changeComplete(todo.id)}
+                                    onDelete={() => this.handleDeleteTodo(todo.id)}
+                                    todo={todo} />
+                            ))} 
+                            {this.state.todos.filter(todo => todo.complete).length ? (
+                                <span className="todo-button-active">
+                                    <button onClick={this.handleAllDeleteTodo}>Delete all complete todo</button>
+                                </span>
+                            ) : null}  
+                        </Col>
+                    </Row>
+                </Container>           
             </div>
         );
     }
