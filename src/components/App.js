@@ -5,10 +5,10 @@ import Todo from './Todo';
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <h1>To-do-list</h1>
-        <Todo />
       </header>
+      <Todo />
     </div>
   );
 }
