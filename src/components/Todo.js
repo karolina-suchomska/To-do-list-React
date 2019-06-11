@@ -83,11 +83,11 @@ class Todo extends Component {
             <div className="todo">
                 <Container>
                     <Row>
-                        <Col className="todo-button-box">
+                        <Col>
                             <div className="todo-button-active">
-                                <button className="todo-button" onClick={() => this.updateTodo('all')}>All</button>
-                                <button className="todo-button" onClick={() => this.updateTodo('active')} >Active</button>
-                                <button className="todo-button" onClick={() => this.updateTodo('complete')} >Complete</button> 
+                                <button onClick={() => this.updateTodo('all')}>All</button>
+                                <button onClick={() => this.updateTodo('active')} >Active</button>
+                                <button onClick={() => this.updateTodo('complete')} >Complete</button> 
                             </div>
                             <div className="todo-button-complete"> 
                                 <button onClick={this.handleAllComplete}>Complete all</button>  

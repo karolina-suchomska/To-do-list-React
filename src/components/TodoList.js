@@ -13,7 +13,7 @@ const TodoList = (props) => {
                 {props.todo.text}
             </span>
             <span className="todo-button-delete">
-                <button onClick={props.onDelete}>x</button>
+                <button onClick={props.onDelete}>X</button>
             </span>
         </div> 
      );
