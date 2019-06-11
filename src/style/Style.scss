@@ -4,49 +4,56 @@
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.7vmin);
   color: rgb(14, 14, 14);
 
   header {
-    padding: 10px;
+    padding: 20px;
     border-bottom: 1px solid rgb(179, 179, 179);
     box-shadow: 0 0 8px 6px rgb(185, 185, 185);
   }
 }
 
 .todo {
-  margin-top: 20px;
-}
+  margin-top: 40px;
 
-.todo-done {
-  padding: 10px;
-}
+  .todo-button-box {
+    position: relative;
+  }
 
-button {
-  background-color: rgb(179, 179, 179);
-  border: 1px solid rgba(90, 90, 90, 0.411);
-  color: rgb(14, 14, 14);
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  outline: none;
-  margin: 10px;
-  cursor: pointer;
-}
+  .todo-complete {
+    padding: 10px;
+  }
 
-button:hover{
-  border: 1px solid rgb(14, 14, 14);
+  button {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(90, 90, 90, 0.411);
+    color: rgb(14, 14, 14);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    margin: 10px !important;
+    font-size: 17px;
+    cursor: pointer;
+
+    &:hover{
+      border: 1px solid rgb(14, 14, 14);
+    }
+  }
 }
 
 .todo-input {
+  margin: 30px 0;
   .todo-input-text {
     flex: 3;
       
     input {
       border: 1px solid rgb(90, 90, 90);
-      background-color: rgb(237, 222, 247);
+      background-color: rgb(255, 255, 255);
       color: rgb(14, 14, 14);
+      font-size: 17px;
       padding: 15px 10px;
       text-align: left;
       text-decoration: none;
@@ -55,20 +62,19 @@ button:hover{
       margin: 0 auto;
     }
   }
+
   .todo-button-add {
     flex: 1;
-  }
-}
 
-.todo-button-add {
-  button {
-    min-width: 80px;
-    border: 1px solid rgb(90, 90, 90);
-    border-left: 0;
-    margin: 0 auto;
-  }
-  button:hover {
-    font-weight: bold;
+    button {
+      min-width: 80px;
+      border: 1px solid rgb(90, 90, 90);
+      border-left: 0;
+      margin: 0 auto !important;
+    }
+    button:hover {
+      font-weight: bold;
+    }
   }
 }
 
@@ -83,9 +89,13 @@ button:hover{
   button {
     min-width: 20px;
     margin: 10px;
-    padding: 5px;
+    padding: 4px 10px;
   }
   button:hover {
     font-weight: bold;
   }
+}
+
+.todo-button-delete-all-complete {
+  margin-top: 60px;
 }
